@@ -18,3 +18,5 @@ class new extends Component {
 }
 
 export default new;
+
+
