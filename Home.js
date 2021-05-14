@@ -10,7 +10,7 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native'
 import Header from './components/Header'
 
-const home = () => {
+const Home = () => {
     return (
         <View style={styles.container}>
             <Header/>
@@ -35,23 +35,5 @@ const styles = StyleSheet.create({
 });
 
 export default home;
-
-
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-
-class Home extends Component {
- 
-
-  render() {
-    return (
-      <View>
-        <Text> Home </Text>
-      </View>
-    );
-  }
-}
-
-export default Home;
 
 

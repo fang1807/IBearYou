@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, Image, SafeAreaView } from 'react-native';
 
-const new = () => {
-  return (
+const test = () => {
+    return (
     <SafeAreaView style={styles.container}>
+    <View>
       <Text style={styles.text}> I Bear You </Text>
-      <Image source={require('./assets/images/teddy bear.png')}
+      <Image source={require('./assets/images/teddy_bear.png')}
              style={styles.image}/>
+             </View>
+          
     </SafeAreaView>
-  )
-}
+  );
+} 
 
 const styles = StyleSheet.create({
   container: {
@@ -23,11 +26,11 @@ const styles = StyleSheet.create({
     fontSize: 40
   },
   image:{
-    width: 100
-    height: 100
-    borderradius: 100/2
+    width: 100,
+    height: 100,
+    borderRadius: 100/2,
   }
-})
-export default new;
+});
+export default test;
 
 

@@ -1,8 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, SafeAreaView,Button, TouchableHighlight } from 'react-native';
-import login from './login';
-import register from './register';
-import home from './home';
+
 
 //export default class welcome extends component{}
 
@@ -11,43 +9,40 @@ import home from './home';
 const welcome = () => {
     return (
   
-    <SafeAreaView style={styles.container, containerStyle]}>
-      <TouchableHighlight onPress={this.}>
+    <SafeAreaView style={[styles.container, containerStyle]}>
+   
         <View style = {styles.buttonLogin}>   
             <Text>Login</Text>   
         </View>
-     </TouchableHighlight>  
-
-     <TouchableHighlight OnPress={this.}>  
-        <View style = {styles.buttonRegister}>   
-            <Text>Register</Text>
+  
+   <View style = {styles.buttonRegister}>   
+            <Text>Register</Text>   
         </View>
-    </TouchableHighlight>
+
 
 
     </SafeAreaView>        
        
     );   
-
-  
     
 }
 
 const containerStyle = {
         backgroundColor: '#E79995',
         width: '100%',
-        height: '100%',
+        height: '100%'
             
 }
 
 const styles = StyleSheet.create({
     
-   container: {   
+   //container: {   
        // alignItems: 'center',
        // justifyContent: 'center'
+      
      
        
-   },
+  // },
  
     text: {
         
