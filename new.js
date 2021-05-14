@@ -1,22 +1,33 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { StyleSheet, View, Text, Image, SafeAreaView } from 'react-native';
 
-class new extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
-
-  render() {
-    return (
-      <View>
-        <Text> test test poundza007 </Text>
-      </View>
-    );
-  }
+const new = () => {
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.text}> I Bear You </Text>
+      <Image source={require('./assets/images/teddy bear.png')}
+             style={styles.image}/>
+    </SafeAreaView>
+  )
 }
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  text:{
+    color: 'pink',
+    fontSize: 40
+  },
+  image:{
+    width: 100
+    height: 100
+    borderradius: 100/2
+  }
+})
 export default new;
 
 
