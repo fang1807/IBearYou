@@ -1,63 +1,86 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView,Button, TouchableHighlight } from 'react-native';
+import React, {Component} from 'react';
+import { View, Text, Image, StyleSheet, SafeAreaView,Button, TouchableHighlight,Alert } from 'react-native';
 
 
-//export default class welcome extends component{}
+ class welcome extends Component{
 
-//render
+  constructor(props) {
+    super(props)
+    this.state = { text: '' };
+  }
 
-const welcome = () => {
+    clickMe() {
+        Alert.alert("Just Click");
+    }
+    
+
+  render() {
     return (
-  
-    <SafeAreaView style={[styles.container, containerStyle]}>
+          <SafeAreaView style={[styles.container, containerStyle]}>
    
-    <TouchableHighlight onPress={this.LoginCheck}>
+   <View style = {styles.button}>
+    <TouchableHighlight onPress={this.clickMe} underlayCoror='#FDF5F5'>
         <View style = {styles.buttonLogin}>   
             <Text style = {styles.textLogin}>Login</Text>   
         </View>
     </TouchableHighlight>
   
-  <TouchableHighlight onPress={this.LoginCheck}>
+  <TouchableHighlight onPress={this.clickMe} underlayCoror='#FDF5F5'>
    <View style = {styles.buttonRegister}>   
             <Text style = {styles.textRegister}>Register</Text>   
         </View>
     </TouchableHighlight>
+   </View>
 
-
-    </SafeAreaView>        
-       
-    );   
-    
+    </SafeAreaView>     
+    );
+  }
 }
 
 
 const containerStyle = {
         backgroundColor: '#E79995',
         width: '100%',
-        height: '100%'
+        height: '100%',
+        flex:1 ,
+        flexDirection: 'column' ,
             
 }
 
 const styles = StyleSheet.create({
     
    container: {   
+       
         alignItems: 'center',
-        justifyContent: 'center'    
+        justifyContent: 'center'  
+          
    },
  
+    button: {
+        marginTop: 580
+    },
 
     buttonLogin: {
-      
-        
+        borderRadius: 5,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#FFFFFF'
+        backgroundColor: '#FFFFFF',
+        height: 39,
+        width: 327,
+        
     },
 
       buttonRegister: {
-        
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: '#E79995',
+         height: 39,
+        width: 327,
+        borderRadius: 5,
+        marginTop: 20,
+        borderWidth: 1,
+        borderColor: '#FFFFFF'
+
     
     },
 
@@ -76,6 +99,7 @@ const styles = StyleSheet.create({
 });
 
 export default welcome;
+
 
 
 
