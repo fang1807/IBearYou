@@ -11,14 +11,17 @@ const welcome = () => {
   
     <SafeAreaView style={[styles.container, containerStyle]}>
    
+    <TouchableHighlight onPress={this.LoginCheck}>
         <View style = {styles.buttonLogin}>   
-            <Text>Login</Text>   
+            <Text style = {styles.textLogin}>Login</Text>   
         </View>
+    </TouchableHighlight>
   
+  <TouchableHighlight onPress={this.LoginCheck}>
    <View style = {styles.buttonRegister}>   
-            <Text>Register</Text>   
+            <Text style = {styles.textRegister}>Register</Text>   
         </View>
-
+    </TouchableHighlight>
 
 
     </SafeAreaView>        
@@ -26,6 +29,7 @@ const welcome = () => {
     );   
     
 }
+
 
 const containerStyle = {
         backgroundColor: '#E79995',
@@ -36,27 +40,38 @@ const containerStyle = {
 
 const styles = StyleSheet.create({
     
-   //container: {   
-       // alignItems: 'center',
-       // justifyContent: 'center'
-      
-     
-       
-  // },
- 
-    text: {
-        
-        color: 'black',
-        fontSize: 18,
+   container: {   
         alignItems: 'center',
-        justifyContent: 'center',
-        
-    },
+        justifyContent: 'center'    
+   },
+ 
 
     buttonLogin: {
-
+      
+        
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: '#FFFFFF'
+    },
+
+      buttonRegister: {
+        
+        alignItems: 'center',
+        justifyContent: 'center',
+    
+    },
+
+    textLogin: {
+        color: '#000000',
+        fontSize: 20,
+    },
+
+    textRegister: {
+        color: '#FFFFFF',
+        fontSize: 20,
     }
+
+
 
 });
 

@@ -14,6 +14,8 @@ const test = () => {
   );
 } 
 
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -26,9 +28,12 @@ const styles = StyleSheet.create({
     fontSize: 40
   },
   image:{
-    width: 100,
-    height: 100,
+
+    width: undefined ,
+    height: 150,
     borderRadius: 100/2,
+    resizeMode: "center"
+    
   }
 });
 export default test;
