@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { View, Text, Image, StyleSheet, SafeAreaView,
         Button, TouchableHighlight,Alert,Separator
-        TextInput} 
+        ,TextInput} 
         from 'react-native';
 
 
@@ -12,7 +12,7 @@ import { View, Text, Image, StyleSheet, SafeAreaView,
     this.state = { 
       username: '',
       password: ''
-     };
+     }; 
   }
 
     
@@ -20,29 +20,44 @@ import { View, Text, Image, StyleSheet, SafeAreaView,
 
  render() {
     return (
-          <View >
-          <View style ={styles.form}></View>
-          <View style={[styles.container, containerStyle]}>
-   
-   <View style={styles.inputs}>
-   <View style={styles.inputContainer}>
-   <TextInput
-   style={[styles.input, styles.whiteFont]}
-    placeholder=”Username”
-    placeholderTextColor=”#FFF”
-       onChangeText={onChangeText}
-        value={text}
-   />
-   
+    <View >
+      <View style ={styles.form}></View>
+        <View style={[styles.container, containerStyle]}>
+          <TextInput 
+            placeholder="Username"
+            style = {styles.TextInputUsername}
+            autoCapitalize='none'
+            />
+
+            <TextInput 
+            placeholder="Password"
+            secureTextEntry={true}
+            style = {styles.TextInputUsername}
+            autoCapitalize='none'
+            />
    </View>
-    </View>
+   
+ 
+        <View style = {styles.forget}>   
+            <Text style = {styles.textForget}>Forget Password ?</Text>   
+   </View>
+        
+
    <View style = {styles.button}>
     <TouchableHighlight onPress={this.clickMe} underlayCoror='#FDF5F5'>
         <View style = {styles.buttonLogin}>   
             <Text style = {styles.textLogin}>Login</Text>   
         </View>
     </TouchableHighlight>
-  
+
+   <View style={{flexDirection: 'row', alignItems: 'center'}}>
+  <View style={{width: 150, height: 1, backgroundColor: '#E79995',marginTop: 12}} />
+    <View>
+      <Text style = {styles.textOr}> or </Text>
+    </View>
+    <View style={{width: 150, height: 1 ,backgroundColor: '#E79995',marginTop: 12}} />    
+ </View>
+
   <TouchableHighlight onPress={this.clickMe} underlayCoror='#FDF5F5'>
    <View style = {styles.buttonRegister}>   
             <Text style = {styles.textRegister}>Register</Text>   
@@ -51,14 +66,14 @@ import { View, Text, Image, StyleSheet, SafeAreaView,
    
  </View>
     </View>   
-      </View >  
+      
     );
   }
 }
 
 const containerStyle = {
 
-        flex:1 ,
+        flex: 1 ,
         flexDirection: 'column' ,  
 }
 
@@ -68,6 +83,9 @@ const formStyle = {
   flexDirection: 'column' ,        
             
 }
+
+
+
 
 const styles = StyleSheet.create({
     
@@ -82,8 +100,9 @@ const styles = StyleSheet.create({
    },
  
     button: {
-        marginTop: 5,
+        marginTop: 230,
         alignItems: 'center',
+        
          
     },
 
@@ -107,7 +126,7 @@ const styles = StyleSheet.create({
         height: 39,
         width: 327,
         borderRadius: 5,
-        marginTop: 55,
+        marginTop: 14,
         borderWidth: 1,
         borderColor: '#E79995'
 
@@ -132,7 +151,30 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
        
-}
+},
+
+    textOr: {
+      color: '#E79995',
+      fontSize: 12,
+      marginTop: 10,
+    },
+
+    textForget: {
+      color:'#E79995',
+      fontSize: 16,
+    
+    },
+
+    forget: {
+      justifyContent: 'flex-end',
+      alignItems: 'flex-end',
+      paddingRight: 30,
+
+    },
+
+    TextInputUsername: {
+
+    }
 
 });
 
