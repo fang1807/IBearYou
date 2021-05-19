@@ -1,10 +1,19 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import { StyleSheet, View, Text, Image, SafeAreaView, Button, TouchableHighlight} from 'react-native';
 import Header from './components/Header'
 
-const quiz = () => {
+class quiz extends Component{
+
+  constructor(props) {
+    super(props)
+    this.state = { };
+  }
+
+    
+
+  render() {
     return (
-    <SafeAreaView style={styles.container}>
+          <SafeAreaView style={styles.container}>
       <View>
         <Text style={styles.textHeader}>Hi Riboots!</Text>
         <Text style={styles.textContent}>Do you want to share something happens today? 
@@ -24,7 +33,10 @@ const quiz = () => {
 
     </SafeAreaView>
     );
-} 
+  }
+}
+
+
 const styles = StyleSheet.create({
   container: {
         backgroundColor: '#FFFFFF',
