@@ -23,18 +23,20 @@ import { View, Text, Image, StyleSheet, SafeAreaView,
     <View >
       <View style ={styles.form}></View>
         <View style={[styles.container, containerStyle]}>
+         <View style={styles.Input}>
           <TextInput 
             placeholder="Username"
-            style = {styles.TextInputUsername}
+            style = {styles.TextInput}
             autoCapitalize='none'
             />
 
             <TextInput 
             placeholder="Password"
             secureTextEntry={true}
-            style = {styles.TextInputUsername}
+            style = {styles.TextInput}
             autoCapitalize='none'
             />
+            </View>
    </View>
    
  
@@ -100,7 +102,7 @@ const styles = StyleSheet.create({
    },
  
     button: {
-        marginTop: 230,
+        marginTop: 58,
         alignItems: 'center',
         
          
@@ -145,9 +147,9 @@ const styles = StyleSheet.create({
 
     form: {
         backgroundColor: '#E79995',
-       height: 410,
+       height: 390,
         width: 420,
-        marginBottom: 20,
+        marginBottom: -130,
         alignItems: 'center',
         justifyContent: 'center',
        
@@ -162,6 +164,7 @@ const styles = StyleSheet.create({
     textForget: {
       color:'#E79995',
       fontSize: 16,
+      
     
     },
 
@@ -169,11 +172,22 @@ const styles = StyleSheet.create({
       justifyContent: 'flex-end',
       alignItems: 'flex-end',
       paddingRight: 30,
+      marginTop: 335,
 
     },
 
-    TextInputUsername: {
+    TextInput: {
+      margin: 15,
+      height: 40,
+      width: 327,
+      padding: 20,
+      fontSize: 20,
+      borderBottomWidth: 1,
+      borderBottomColor: '#707070',
+    },
 
+    Input: {
+      marginTop: 390,
     }
 
 });
