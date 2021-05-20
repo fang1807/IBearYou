@@ -2,8 +2,7 @@
 import React, {Component} from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native'
 
-
-class Header extends Component{
+class darkBg extends Component{
   render() {
      return (
         <View style={styles.container}>
@@ -156,6 +155,6 @@ const styles = StyleSheet.create({
 
 })
 
-export default Header;
+export default darkBg;
 
 

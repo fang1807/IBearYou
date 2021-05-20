@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { StyleSheet, View, Text, Image, SafeAreaView, Button, TouchableHighlight} from 'react-native';
-import Header from './components/Header'
+import darkBg from './components/darkBg'
 
 class quiz extends Component{
 
@@ -13,25 +13,30 @@ class quiz extends Component{
 
   render() {
     return (
-          <SafeAreaView style={styles.container}>
-      <View>
+          <View style={styles.container}>
+          
+      <View style= {styles.textHeaderStyle}>
         <Text style={styles.textHeader}>Hi Riboots!</Text>
+       </View> 
+       <View>
         <Text style={styles.textContent}>Do you want to share something happens today? 
         The diary will helpfully for you goal in the future, Make your dream come true 
         and you can look back to the evolution of your self this is will support the 
         meaning of your life so let's start your dairy.</Text>
       </View>
       <View>
-        <Image source={require('./assets/images/tarotCard.png')}
+        <Image source={require('./assets/images/Card.png')}
                style ={styles.image}/>
       </View>
-      <View>
-        <Button title="Let's Get Started"
-                onPress={this.clickMe}
-                style ={styles.button}/>
-      </View>
-
-    </SafeAreaView>
+      
+      <View style = {styles.button}>
+         <TouchableHighlight onPress={this.clickMe} >
+        <View style = {styles.buttonStart}>   
+            <Text style = {styles.textStart}>Let's Get Started</Text>   
+        </View>
+    </TouchableHighlight>
+</View>
+    </View>
     );
   }
 }
@@ -45,9 +50,19 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%'
     },
+
+  textHeaderStyle: {
+       marginTop: -20,
+       marginRight: 130,
+       
+  },
+
   textHeader: {
         color: '#E79995',
-        fontSize: 36
+        fontSize: 36,
+        marginTop: 50,
+        
+
     },
   textContent: {
         color: '#000000',
@@ -58,14 +73,31 @@ const styles = StyleSheet.create({
         height: 263,
         resizeMode: 'center'
     },
-  button: {
+
+        button: {
+        marginTop: 58,
+        alignItems: 'center',
+        justifyContent: 'center',
+        
+         
+    },
+
+    buttonStart: {
+        borderRadius: 5,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#E79995',
         height: 41,
         width: 278,
         borderRadius: 5,
-        marginTop: 14,
+        marginTop: -10,
+        
+        
+    },
+
+    textStart: {
+      color: '#FFFFFF',
+      fontSize: 20,
     }
 
 });

@@ -22,7 +22,7 @@ class Home  extends Component{
      return (
         <View style={styles.container}>
            
-       <Text>rr</Text>
+       <Text>Home</Text>
        
         </View>      
     );
