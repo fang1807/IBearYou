@@ -3,17 +3,36 @@ import { StyleSheet, View, Text, Image, SafeAreaView, Button, TouchableHighlight
 import SwitchSelector from "@jkdrangel/react-native-switch-selector";
 import darkBg from './components/darkBg'
 
+const titleOptions = [
+  { label: "Quiz", value: "quiz" },
+  { label: "History", value: "history" },
+];
+
 class quiz extends Component{
 
   constructor(props) {
     super(props)
-    this.state = { };
+    this.state = { 
+      title:'',
+    };
   }
-
-    
-
+  setTitle(title){
+    this.setState({title: title});
+  }
   render() {
     return (
+      <View padder>
+          <SwitchSelector
+          textColor='#565656'
+          selectedColor='#FFFFFF'
+          buttonColor='#FE8150'
+          fontSize= {16}
+          backgroundColor='#FFE0D4'
+          options={titleOptions}
+          initial={0}
+          onPress={value => this.setTitle({title: value})}
+          />
+      </View>
           <View style={styles.container}>
           
       <View style= {styles.textHeaderStyle}>
@@ -32,11 +51,12 @@ class quiz extends Component{
       
       <View style = {styles.button}>
          <TouchableHighlight onPress={this.clickMe} >
-        <View style = {styles.buttonStart}>   
+          <View style = {styles.buttonStart}>   
             <Text style = {styles.textStart}>Let's Get Started</Text>   
-        </View>
-    </TouchableHighlight>
-</View>
+          </View>
+         </TouchableHighlight>
+      </View>
+    
     </View>
     );
   }
