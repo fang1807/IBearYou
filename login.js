@@ -10,8 +10,8 @@ import { View, Text, Image, StyleSheet, SafeAreaView,
   constructor(props) {
     super(props)
     this.state = { 
-      username: '',
-      password: ''
+      Username: '',
+      Password: ''
      }; 
   }
 
@@ -23,23 +23,39 @@ import { View, Text, Image, StyleSheet, SafeAreaView,
     <View >
       <View style ={styles.form}></View>
         <View style={[styles.container, containerStyle]}>
+
+
          <View style={styles.Input}>
+        
           <TextInput 
             placeholder="Username"
-            style = {styles.TextInput}
+            style = {[styles.TextInput,TextInputStyle]}
             autoCapitalize='none'
             />
+
+              <View style= {styles.image}>
+          <Image source={require('./assets/images/People.png')}
+               style ={{width: 19.61, height: 23 }}/>
+ </View>
 
             <TextInput 
             placeholder="Password"
             secureTextEntry={true}
-            style = {styles.TextInput}
+            style = {[styles.TextInput,TextInputStyle]}
             autoCapitalize='none'
             />
+
+         <View style= {styles.image}>
+          <Image source={require('./assets/images/Lock.png')}
+               style ={{width: 19.61, height: 23 }}/>
+ </View>
             </View>
+
+            
    </View>
    
  
+  
         <View style = {styles.forget}>   
             <Text style = {styles.textForget}>Forget Password ?</Text>   
    </View>
@@ -84,6 +100,10 @@ const formStyle = {
  flex: 1,
   flexDirection: 'column' ,        
             
+}
+
+const TextInputStyle = {
+paddingLeft: 40,
 }
 
 
@@ -184,11 +204,21 @@ const styles = StyleSheet.create({
       fontSize: 20,
       borderBottomWidth: 1,
       borderBottomColor: '#707070',
+      
     },
 
     Input: {
       marginTop: 390,
-    }
+    },
+
+    image: {
+      alignItems: 'flex-start',
+      marginTop: -51 ,
+      paddingLeft: 14,
+      
+    },
+
+   
 
 });
 

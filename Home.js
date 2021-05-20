@@ -5,20 +5,29 @@
  * @format
  * @flow strict-local
  */
-
-import React from 'react';
+import React, {Component} from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native'
-import Header from './components/Header'
 
-const Home = () => {
-    return (
+
+class Home  extends Component{
+
+  constructor(props) {
+    super(props)
+    this.state = {  };
+  }
+
+    
+
+  render() {
+     return (
         <View style={styles.container}>
-            <Header/>
+           
+       <Text>rr</Text>
        
-        </View>        
-    ) ;  
+        </View>      
+    );
+  }
 }
-
 
 
 const styles = StyleSheet.create({
@@ -27,13 +36,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingTop: 32
     },
+
     text: {
         color: '#000000',
         fontSize: 18
         
     }
+
+
 });
 
-export default home;
-
+export default Home ;
 
