@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { StyleSheet, View, Text, Image, SafeAreaView, Button, TouchableHighlight} from 'react-native';
+import SwitchSelector from "@jkdrangel/react-native-switch-selector";
 import darkBg from './components/darkBg'
 
 class quiz extends Component{
