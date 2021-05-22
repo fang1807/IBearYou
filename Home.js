@@ -7,14 +7,13 @@
  */
 import React, {Component} from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native'
+import Bg1 from './components/Bg1';
+import Bg2 from './components/Bg2';
+
 
 
 class Home  extends Component{
 
-  constructor(props) {
-    super(props)
-    this.state = {  };
-  }
 
     
 
@@ -22,7 +21,7 @@ class Home  extends Component{
      return (
         <View style={styles.container}>
            
-       <Text>Home</Text>
+       <Bg1/>
        
         </View>      
     );
@@ -34,14 +33,10 @@ const styles = StyleSheet.create({
     container:{
         flex: 1,
         alignItems: 'center',
-        paddingTop: 32
+        paddingTop: -10,
     },
 
-    text: {
-        color: '#000000',
-        fontSize: 18
-        
-    }
+  
 
 
 });

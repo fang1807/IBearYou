@@ -3,10 +3,10 @@ import React, {Component} from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native'
 
 
-class lightBg extends Component{
-  render() {
+export default function Bg2() {
+    
      return (
-        <View style={styles.container}>
+       <View style={styles.container}>
         
            <View style = {styles.header}>
        <Text>I Bear You</Text>
@@ -31,14 +31,12 @@ class lightBg extends Component{
       style={styles.imageProfile}/>  
 
         </View>
- 
-
 
 
 
 
     );
-  }
+  
 }
 
 const styles = StyleSheet.create({
@@ -156,6 +154,6 @@ const styles = StyleSheet.create({
 
 })
 
-export default lightBg;
+
 
 

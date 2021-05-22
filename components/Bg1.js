@@ -1,11 +1,10 @@
+import React from 'react';
+import{ View,Text,StyleSheet,Image} from 'react-native';
 
-import React, {Component} from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native'
 
-class darkBg extends Component{
-  render() {
-     return (
-        <View style={styles.container}>
+export default function Bg1() {
+    return (
+       <View style={styles.container}>
         
            <View style = {styles.header}>
        <Text>I Bear You</Text>
@@ -30,14 +29,7 @@ class darkBg extends Component{
       style={styles.imageProfile}/>  
 
         </View>
- 
-
-
-
-
-
     );
-  }
 }
 
 const styles = StyleSheet.create({
@@ -149,12 +141,6 @@ const styles = StyleSheet.create({
       marginRight: -310,
       width: 26,
       height: 26,
-  },
+  }
 
-
-
-})
-
-export default darkBg;
-
-
+});
