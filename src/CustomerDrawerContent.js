@@ -11,11 +11,11 @@ import { View, Text, Image, StyleSheet, SafeAreaView,
 <SafeAreaView style={{flex:1 , backgroundColor: 'pink'}}>
 <ScrollView style={{marginLeft: 20}}>
       <TouchableOpacity style={{marginTop: 20}}
-         onPress={() => props.navigation.navigate('MenuTab')} >
+         onPress={() => this.props.navigation.navigate('MenuTab')} >
         <Text>Menu Tab</Text>
       </TouchableOpacity>
           <TouchableOpacity style={{marginTop: 20}}
-         onPress={() => props.navigation.navigate('Notifications')} >
+         onPress={() => this.props.navigation.navigate('Notifications')} >
         <Text>Notifications</Text>
       </TouchableOpacity>
 </ScrollView>

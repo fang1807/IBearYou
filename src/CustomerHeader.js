@@ -13,8 +13,8 @@ import {IMAGE} from './constants/Image';
         {
        isHome? 
        <TouchableOpacity onPress ={() => navigation.openDrawer()}>
-          <Image style={{width: 30, height: 30, marginLeft: 19.84}}
-          source = {IMAGE.ICON_MENU}
+          <Image source = {IMAGE.ICON_MENU}
+          style={{width: 30, height: 30, marginLeft: 19.84}}
           resizeMode = "contain"
       />
       </TouchableOpacity>
@@ -23,7 +23,7 @@ import {IMAGE} from './constants/Image';
       onPress ={() => navigation.goBack()}
       >
         <Image style={{width: 14.32,height: 26, marginLeft: 19.84}}
-        source = {IMAGE.ICON_BACK)}
+        source = {IMAGE.ICON_BACK}
         resizeMode="contain"
         />
         </TouchableOpacity>

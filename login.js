@@ -5,6 +5,7 @@ import { View, Text, Image, StyleSheet, SafeAreaView,
         from 'react-native';
 
 
+
  class login extends Component{
 
 

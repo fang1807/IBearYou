@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, SafeAreaView,
         Button, TouchableHighlight,Alert,Separator
         ,TextInput,TouchableOpacity, ScrollView } 
         from 'react-native';
-import {CustomerHeader} from './App';
+import {CustomerHeader} from '../App';
 
  export default class QuizScreen extends Component{
     render() {

@@ -1,7 +1,16 @@
 import React, {Component} from 'react';
-import { StyleSheet, View, Text, Image, SafeAreaView, Button, TouchableHighlight} from 'react-native';
+import { StyleSheet, View, Text, Image, SafeAreaView, Button
+        , TouchableHighlight,TouchableOpacity, Dementions} 
+        from 'react-native';
 //import SwitchSelector from "react-native-switch-selector";
-import darkBg from './components/Bg1';
+import Bg1 from './components/Bg1';
+import Bg2 from './components/Bg2';
+import {CompositeNavigationProp} from '@react-navigation/native' ;
+
+interface WelcomeProps {
+  navigation: CompositeNavigationProp<
+  >
+}
 
 class quiz extends Component{
 
@@ -15,11 +24,40 @@ class quiz extends Component{
   render() {
     return (
 
- 
+
 <View>
-<Bg1/>
+ <Bg1/>
+
+ <View style={{flexDirection: 'row' ,justifyContent: 'space-around', alignItems: 'center'}}>
+
+      <TouchableOpacity 
+        style={{marginTop:80, borderRadius: 50,
+        backgroundColor: '#FE8150',
+        height: 40,
+        width: 167,
+        alignItems: 'center',
+        justifyContent: 'center',}}>
+      <Text style={{color:'#FFFFFF',frontSize: 16}}>
+      Quiz
+      </Text>
+      </TouchableOpacity>
+
+       <TouchableOpacity style={{marginTop:80, borderRadius: 50,
+        backgroundColor: '#FFE0D4',
+        height: 40,
+        width: 167,
+        alignItems: 'center',
+        justifyContent: 'center',}}>
+      <Text style={{color:'#565656',frontSize: 16}}>
+      History
+      </Text>
+      </TouchableOpacity>
+
+      </View>
+
        <View style={styles.textHeaderStyle}>
-        <Text style={styles.textHeader}>Hi Riboots!</Text>
+      
+        <Text style={styles.textHeader}>Hi Riboots !</Text>
        </View> 
 
        <View>
@@ -31,19 +69,25 @@ class quiz extends Component{
 
    
 
-
-      <View>
+<View style={{flexDirection: 'row', height: 50}}>
+      <View style={{flex: 1, alignItems: 'center'}}>
          <Image source={require('./assets/images/Card.png')}
-      style={styles.image}/>  
+      style={styles.image} />  
+   </View>
    </View>
       
+      
       <View style = {styles.button}>
-         <TouchableHighlight onPress={this.clickMe} >
+         <TouchableHighlight onPress={() => {
+
+         }} >
           <View style = {styles.buttonStart}>   
-            <Text style = {styles.textStart}>Let's Get Started</Text>   
+            <Text  style = {styles.textStart}>Let's Get Started</Text>   
           </View>
          </TouchableHighlight>
       </View>   
+
+  
     </View>
    
     );
@@ -61,15 +105,18 @@ const styles = StyleSheet.create({
     },
 
   textHeaderStyle: {
-       marginTop: -20,
-       marginRight: 130,
+    
+    alignItems: 'flex-start',
+    
+    marginLeft: 40,
        
   },
 
   textHeader: {
         color: '#E79995',
         fontSize: 36,
-        marginTop: 50,
+        marginTop: 35,
+        paddingBottom: 20 ,
         
 
     },
@@ -84,7 +131,8 @@ const styles = StyleSheet.create({
     },
 
         button: {
-        marginTop: 58,
+          flex: 1,
+        marginTop: 250,
         alignItems: 'center',
         justifyContent: 'center',
         
@@ -98,7 +146,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#E79995',
         height: 41,
         width: 278,
-        borderRadius: 5,
         marginTop: -10,
         
         

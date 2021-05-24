@@ -4,18 +4,20 @@ import { View, Text, Image, StyleSheet, SafeAreaView,
         ,TextInput,TouchableOpacity, ScrollView } 
         from 'react-native';
 
+import {CustomerHeader} from '../App';
 
- export default class LoginScreen extends Component{
+  class LoginScreen extends Component{
     render() {
 return (
     
     <SafeAreaView style={{ flex: 1 }}>
+      
      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
      <Text>Login</Text>
 
        <TouchableOpacity style={{marginTop: 20}}
       onPress={() => navigation.navigate('HomeApp')} >
-      <Text>Login!!</Text>
+      <Text>Login</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={{marginTop: 20}}
@@ -24,9 +26,12 @@ return (
       </TouchableOpacity>
       </View>
     </SafeAreaView>
+
   );
     
 }
 
 }
+
+export default LoginScreen;
 
