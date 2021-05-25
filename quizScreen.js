@@ -29,26 +29,38 @@ class quiz extends Component{
  <Bg1/>
 
  <View style={{flexDirection: 'row' ,justifyContent: 'space-around', alignItems: 'center'}}>
-
+<View >
       <TouchableOpacity 
         style={{marginTop:80, borderRadius: 50,
         backgroundColor: '#FE8150',
         height: 40,
         width: 167,
         alignItems: 'center',
-        justifyContent: 'center',}}>
+        justifyContent: 'center',
+        shadowColor: '#000000',
+        shadowOffset: { width: 1, height: 4 },
+        shadowOpacity:  0.20,
+        shadowRadius:5,
+        elevation: 5,
+        }}>
       <Text style={{color:'#FFFFFF',frontSize: 16}}>
-      Quiz
+      Check-up
       </Text>
       </TouchableOpacity>
+      </View>
 
        <TouchableOpacity style={{marginTop:80, borderRadius: 50,
         backgroundColor: '#FFE0D4',
         height: 40,
         width: 167,
         alignItems: 'center',
-        justifyContent: 'center',}}>
-      <Text style={{color:'#565656',frontSize: 16}}>
+        justifyContent: 'center',
+        shadowColor: '#000000',
+        shadowOffset: { width: 1, height: 4 },
+        shadowOpacity:  0.20,
+        shadowRadius:5,
+        elevation: 5,}}>
+      <Text style={{color:'#565656',frontSize: 16,}}>
       History
       </Text>
       </TouchableOpacity>
@@ -60,19 +72,18 @@ class quiz extends Component{
         <Text style={styles.textHeader}>Hi Riboots !</Text>
        </View> 
 
-       <View>
-        <Text style={styles.textContent}>Do you want to share something happens today? 
-        The diary will helpfully for you goal in the future, Make your dream come true 
-        and you can look back to the evolution of your self this is will support the 
-        meaning of your life so let's start your dairy.</Text>
+       <View style={{alignItems: 'center',}}>
+        <Text style={styles.textContent}>วันนี้เป็นยังไงบ้าง มาทบทวนตัวเองไปกับน้องหมีกันไหม?</Text>
       </View>
 
    
 
-<View style={{flexDirection: 'row', height: 50}}>
-      <View style={{flex: 1, alignItems: 'center'}}>
+<View style={{flexDirection: 'row', height: 50, marginTop: 5}}>
+      <View style={{flex: 1, alignItems: 'center',}}>
+      
          <Image source={require('./assets/images/Card.png')}
       style={styles.image} />  
+      
    </View>
    </View>
       
@@ -108,7 +119,7 @@ const styles = StyleSheet.create({
     
     alignItems: 'flex-start',
     
-    marginLeft: 40,
+    marginLeft: 35,
        
   },
 
@@ -118,16 +129,29 @@ const styles = StyleSheet.create({
         marginTop: 35,
         paddingBottom: 20 ,
         
+        
 
     },
   textContent: {
         color: '#000000',
-        fontSize: 18
+        fontSize: 18,
+        paddingLeft: 50,
+        paddingRight: 50,
+        marginBottom: 25,
+        
+        
     },
   image: {
         width: 206,
         height: 263,
-        resizeMode: 'center'
+        resizeMode: 'center',
+        shadowColor: '#000000',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity:  0.3,
+        shadowRadius:5,
+        elevation: 5,
+        
+        
     },
 
         button: {
@@ -135,6 +159,11 @@ const styles = StyleSheet.create({
         marginTop: 250,
         alignItems: 'center',
         justifyContent: 'center',
+        shadowColor: "black",
+        shadowOffset: { width: 0, height: 4 },
+        shadowRadius: 3,
+        shadowOpacity: 0.25,
+        elevation: 3,
         
          
     },
@@ -146,7 +175,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#E79995',
         height: 41,
         width: 278,
-        marginTop: -10,
+        marginTop: -1,
+        overflow: "hidden",
         
         
     },

@@ -11,39 +11,7 @@ import login from './login';
 const StackApp = createStackNavigator();
 
 export default function navigation() {
-
-const [isLoading, setIsLoading] = React.useState(true);
-const [userToken, setUserToken] = React.useState(null);
-
-const authContext = React.userMemo(() =>({
-
-  Login: () => {
-    setUserToken('fgkj');
-    setIsLoading(false);
-  },
-  Logout: () => {
-    setUserToken('null');
-    setIsLoading(false);
-  },
-  Register: () => {
-    setUserToken('fgkj');
-    setIsLoading(false);
-  }
-}));
-
-useEffect(() => {
- setTimeout(() => {
-   setIsLoading(false);
- }, 1000);
-}, []);
-
-if( isLoading) {
-
-  return( <View style = {{flex: 1 ,justifyContent: 'center', alignItems: 'center'}}>
-  <ActivityIndicator size="large"/>
-  </View>
-  )
-}
+  
   return (
     <NavigationContainer>
      
